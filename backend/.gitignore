@@ -1,6 +1,6 @@
 # Database binaries
-*.sqlite
-*.sqlite3
+src/database/*.sqlite
+
 # Logs
 logs
 *.log
