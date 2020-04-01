@@ -1,8 +1,10 @@
 FROM node:alpine
+USER node
+ENV NODE_ENV development
 
-WORKDIR /usr/app
+WORKDIR /home/node
 
-COPY package*json ./
+COPY package*.json ./
 
 RUN npm install
 
@@ -10,4 +12,4 @@ COPY . .
 
 EXPOSE 3333
 
-CMD ["npm ", "start"]
+CMD ["npm", "start"]
