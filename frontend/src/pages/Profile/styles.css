@@ -5,25 +5,25 @@
   margin: 32px auto;
 }
 
-.profile-container  header {
+.profile-container header {
   display: flex;
   align-items: center;
 }
 
-.profile-container  header span {
+.profile-container header span {
   font-size: 20px;
   margin-left: 24px;
 }
-.profile-container  header img {
+.profile-container header img {
   height: 64px;
 }
-.profile-container  header a {
+.profile-container header a {
   width: 260px;
   margin-left: auto;
   margin-top: 0;
 }
 
-.profile-container  header button {
+.profile-container header button {
   height: 60px;
   width: 60px;
   border-radius: 4px;
@@ -33,7 +33,7 @@
   transition: border-color 0.2s;
 }
 
-.profile-container  header button:hover{
+.profile-container header button:hover {
   border-color: #999;
 }
 
@@ -61,6 +61,7 @@
   right: 24px;
   top: 24px;
   border: 0;
+  background-color: transparent;
 }
 
 .profile-container ul li button:hover {
