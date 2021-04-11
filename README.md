@@ -26,17 +26,51 @@
 
 ---
 
-## How to run
+### :information_source: How To Use
 
-- `npm install` or `yarn install` within the folders `backend`, `frontend` and `mobile` to install the dependencies.
+#### Server
 
-- `node_modules/.bin/knex migrate:latest` within `backend` folder and `npm start` or `yarn start` to start the backend.
+```bash
 
-- **Web:** `npm start` within `frontend` folder. Accessible from browser **http://localhost:3000**.
+$ cd backend
 
-- **Mobile:** `npm start` within `mobile` folder. Accessible from Expo, Emulator or Physical device under **http://localhost:19002**.
+# install dependencies
+$ npm install
 
-###### Check within the folder `src/services/api.js` under `mobile` and `frontend` if your IP address is correct before testing.
+# run migrations
+$ ./node_modules/.bin/knex migrate:latest
+
+# Run server
+$ npm start
+```
+
+#### Web
+
+```bash
+
+$ cd frontend
+
+# install dependencies
+$ yarn
+
+# Run application
+$ yarn start
+```
+
+#### Mobile
+
+```bash
+
+$ cd mobile
+
+# install dependencies
+$ yarn
+
+# Run application
+$ npm -i expo-cli -g && expo start
+```
+
+###### Check within `src/services/api.js` under `mobile` and `frontend` if your IP address is correct before testing.
 
 ## Demo
 
