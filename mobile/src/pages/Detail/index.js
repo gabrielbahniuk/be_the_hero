@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  View, Text, Image, TouchableOpacity, Linking,
-} from 'react-native';
+import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
 import * as MailComposer from 'expo-mail-composer';
@@ -13,14 +11,14 @@ export default function Detail() {
   const route = useRoute();
   const { incident } = route.params;
 
-  const message = `Olá ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}`;
+  const message = `Hello ${incident.name}, I am getting in contact because I want to help in the case "${incident.title}" with the ammount of ${Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(incident.value)}`;
   function navigateBack() {
     navigation.goBack();
   }
 
   function sendMail() {
     MailComposer.composeAsync({
-      subject: `Heroi do caso: ${incident.title}`,
+      subject: `Hero: ${incident.title}`,
       recipients: [incident.email],
       body: message,
     });
@@ -41,15 +39,15 @@ export default function Detail() {
 
       <View style={styles.incident}>
         <Text style={[styles.incidentProperty, { marginTop: 0 }]}>NGO:</Text>
-        <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.state}</Text>
+        <Text style={styles.incidentValue}>{incident.name} from {incident.city}/{incident.state}</Text>
 
         <Text style={styles.incidentProperty}>CASE:</Text>
         <Text style={styles.incidentValue}>{incident.title}</Text>
 
         <Text style={styles.incidentProperty}>Value:</Text>
         <Text style={styles.incidentValue}>
-          {Intl.NumberFormat('pt-BR',
-            { style: 'currency', currency: 'BRL' }).format(incident.value)}
+          {Intl.NumberFormat('de-DE',
+            { style: 'currency', currency: 'EUR' }).format(incident.value)}
         </Text>
       </View>
 

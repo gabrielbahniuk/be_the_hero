@@ -26,19 +26,19 @@ export default function Incidents() {
     if (loading) {
       return;
     }
+
     if (total > 0 && incidents.length === total) {
       return;
     }
 
     setLoading(true);
 
-
     const response = await api.get('incidents', {
       params: { page },
     });
 
     setIncidents([...incidents, ...response.data]);
-    setTotal(response.headers['X-Total-Count']);
+    setTotal(response.headers['x-total-count']);
     setPage(page + 1);
     setLoading(false);
   }
@@ -75,8 +75,8 @@ export default function Incidents() {
 
             <Text style={styles.incidentProperty}>Value:</Text>
             <Text style={styles.incidentValue}>
-              {Intl.NumberFormat('pt-BR',
-                { style: 'currency', currency: 'BRL' }).format(incident.value)}
+              {Intl.NumberFormat('de-DE',
+                { style: 'currency', currency: 'EUR' }).format(incident.value)}
             </Text>
 
             <TouchableOpacity
