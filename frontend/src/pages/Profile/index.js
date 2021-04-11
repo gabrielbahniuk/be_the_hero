@@ -69,9 +69,9 @@ export default function Profile() {
             <p>{incident.description}</p>
             <strong>VALUE:</strong>
             <p>
-              {Intl.NumberFormat("pt-BR", {
+              {Intl.NumberFormat("de-DE", {
                 style: "currency",
-                currency: "BRL",
+                currency: "EUR",
               }).format(incident.value)}
             </p>
             <button type="button">

@@ -52,7 +52,7 @@ export default function NewIncident() {
         <form onSubmit={handleNewIncident}>
           <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Case title..." />
           <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
-          <input value={value} onChange={(e) => setValue(e.target.value)} placeholder="Value in R$" />
+          <input value={value} onChange={(e) => setValue(e.target.value)} placeholder="Value in EUR" />
 
           <button className="button" type="submit">Register</button>
 
