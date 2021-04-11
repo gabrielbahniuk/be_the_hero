@@ -19,8 +19,7 @@ module.exports = {
         'ongs.state'
       ])
 
-    res.header('X-Total-Count', count['count(*)'])
-
+    res.header('x-total-count', count['count(*)'])
     return res.json(incidents)
   },
   async create (req, res) {
