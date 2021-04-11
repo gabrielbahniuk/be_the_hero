@@ -30,7 +30,7 @@
 
 - `npm install` or `yarn install` within the folders `backend`, `frontend` and `mobile` to install the dependencies.
 
-- `npx run knex migrate:latest` within `backend` folder and `npm start` or `yarn start` to start the backend.
+- `node_modules/.bin/knex migrate:latest` within `backend` folder and `npm start` or `yarn start` to start the backend.
 
 - **Web:** `npm start` within `frontend` folder. Accessible from browser **http://localhost:3000**.
 
